@@ -1,25 +1,26 @@
-function Circle(x, y, r){
+function BoundaryCircle(x, y, r, color, id){
 	let options = {
 		friction: 0,
-		restitution: 0.6,
+		restitution: 0,
+		isStatic: true,
 	}
-
 
 	this.body = Bodies.circle(x, y, r, options);
 	this.r = r; 
+	this.body.id = id;
+	this.body.render.fillStyle = color;
 	Composite.add(world, this.body);
-
-	this.isOffScreen = () => {
-		let pos = this.body.position; 
-		if (pos.y > height + 50){
-			return true; 
-		} else {
-			return false; 
-		}
-	}
 
 	this.removeFromWorld = () => {
 		Composite.remove(world, this.body);
+	}
+
+	this.setRadius = (newR) => {
+		this.r = newR;
+	}
+
+	this.changeColor = (color) => {
+		fill(color);
 	}
 
 	this.show = function() {
@@ -30,10 +31,10 @@ function Circle(x, y, r){
 		translate(pos.x, pos.y); 
 		rotate(angle);
 		rectMode(CENTER);
-		strokeWeight(1);
-		stroke('#FF1178');
-		fill('#FF1178');
+		fill(this.body.render.fillStyle);
 		ellipse(0, 0, this.r * 2);
 		pop();
 	}
 }
+
+//fill('#f7e000');
