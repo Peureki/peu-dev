@@ -1,7 +1,8 @@
 function Circle(x, y, r){
 	let options = {
 		friction: 0,
-		restitution: 0.6,
+		restitution: 0.7,
+		density: 0.003,
 	}
 
 

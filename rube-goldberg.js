@@ -36,7 +36,7 @@ let color = [
 let words = [
         "personality",
         "fun",
-        "dynamics",
+        "dynamic",
         "color",
         "beauty",
         "charm",
@@ -172,14 +172,15 @@ function setup(){
     world = engine.world; 
     Engine.run(engine); 
 
-    // EDGES OF THE SCREEN
-    // This way, the objects won't go beyond the screen on the sides
-    boundaries.push(new Boundary(-2, 0, 5, windowHeight*6.5, 0, 'left-wall'));
-    boundaries.push(new Boundary(windowWidth, 0, 5, windowHeight*6.5, 0, 'right-wall'));
+    
 
     if (windowWidth > 768){
         // DESKTOP VERSION
         //
+        // EDGES OF THE SCREEN
+        // This way, the objects won't go beyond the screen on the sides
+        boundaries.push(new Boundary(-2, 0, 5, windowHeight*7, 0, 'left-wall'));
+        boundaries.push(new Boundary(windowWidth, 0, 5, windowHeight*7, 0, 'right-wall'));
         // HERO BOUNDARIES 
         boundaries.push(new Boundary(windowWidth*0.7, windowHeight*0.2, width*0.3, 10, 0.2, 'hero-block-1'));
         boundaries.push(new Boundary(windowWidth*0.85, windowHeight*0.35, width*0.3, 10, -0.2, 'hero-block-2'));
@@ -230,46 +231,90 @@ function setup(){
 
         // PROJECTS SECTION
         // Domino wall
-        boundaries.push(new Boundary(0, windowHeight*7, width*2, 30, 0, 'about-line-1'));
-        dominoes.push(new Domino(width*0.10, windowHeight*6.9, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.20, windowHeight*6.9, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.30, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.40, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.50, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.60, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.70, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.80, windowHeight*6.9, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.90, windowHeight*6.9, 20, windowHeight*0.2)); 
+        boundaries.push(new Boundary(0, windowHeight*8, width*2, 10, 0, 'about-line-1'));
+        dominoes.push(new Domino(width*0.05, windowHeight*7.9, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.15, windowHeight*7.9, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.25, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.35, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.45, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.55, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.65, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.75, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.85, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.95, windowHeight*7.9, 10, windowHeight*0.2)); 
 
-        dominoes.push(new Domino(width*0.10, windowHeight*6.7, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.20, windowHeight*6.7, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.30, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.40, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.50, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.60, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.70, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.80, windowHeight*6.7, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.90, windowHeight*6.7, 20, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.10, windowHeight*7.9, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.20, windowHeight*7.9, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.30, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.40, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.50, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.60, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.70, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.80, windowHeight*7.9, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.90, windowHeight*7.9, 10, windowHeight*0.2)); 
 
-        dominoes.push(new Domino(width*0.10, windowHeight*6.5, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.20, windowHeight*6.5, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.30, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.40, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.50, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.60, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.70, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.80, windowHeight*6.5, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.90, windowHeight*6.5, 20, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.10, windowHeight*7.7, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.20, windowHeight*7.7, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.30, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.40, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.50, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.60, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.70, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.80, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.90, windowHeight*7.7, 10, windowHeight*0.2)); 
 
-        dominoes.push(new Domino(width*0.10, windowHeight*6.3, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.20, windowHeight*6.3, 20, windowHeight*0.2));
-        dominoes.push(new Domino(width*0.30, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.40, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.50, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.60, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.70, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.80, windowHeight*6.3, 20, windowHeight*0.2)); 
-        dominoes.push(new Domino(width*0.90, windowHeight*6.3, 20, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.05, windowHeight*7.7, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.15, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.25, windowHeight*7.7, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.35, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.45, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.55, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.65, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.75, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.85, windowHeight*7.7, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.95, windowHeight*7.7, 10, windowHeight*0.2)); 
+
+        dominoes.push(new Domino(width*0.10, windowHeight*7.5, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.20, windowHeight*7.5, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.30, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.40, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.50, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.60, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.70, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.80, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.90, windowHeight*7.5, 10, windowHeight*0.2)); 
+
+        dominoes.push(new Domino(width*0.05, windowHeight*7.5, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.15, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.25, windowHeight*7.5, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.35, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.45, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.55, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.65, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.75, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.85, windowHeight*7.5, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.95, windowHeight*7.5, 10, windowHeight*0.2)); 
+
+        dominoes.push(new Domino(width*0.10, windowHeight*7.3, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.20, windowHeight*7.3, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.30, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.40, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.50, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.60, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.70, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.80, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.90, windowHeight*7.3, 10, windowHeight*0.2));
+
+        dominoes.push(new Domino(width*0.05, windowHeight*7.3, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.15, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.25, windowHeight*7.3, 10, windowHeight*0.2));
+        dominoes.push(new Domino(width*0.35, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.45, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.55, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.65, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.75, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.85, windowHeight*7.3, 10, windowHeight*0.2)); 
+        dominoes.push(new Domino(width*0.95, windowHeight*7.3, 10, windowHeight*0.2)); 
         // Keep creating circles at the start
         // Check what screen count it is in so the circles can properly drop in the right location
         circleScreenCount = 1
@@ -301,14 +346,77 @@ function setup(){
                 circles.push(new Circle(20, -20, random(10, 30)));
             }, 1000); 
         }
-
+        // EDGES OF THE SCREEN
+        // This way, the objects won't go beyond the screen on the sides
+        boundaries.push(new Boundary(-10, 0, 20, pageHeight*2, 0, 'left-wall'));
+        boundaries.push(new Boundary(windowWidth, 0, 20, pageHeight*2, 0, 'right-wall'));
         // HERO BOUNDARIES 
         boundaries.push(new Boundary(0, windowHeight*0.60, width, 10, 0.2, 'hero-block-1'));
         boundaries.push(new Boundary(windowWidth, windowHeight*0.70, width, 10, -0.2, 'hero-block-2'));
         boundaries.push(new Boundary(0, windowHeight*0.80, width, 10, 0.2, 'hero-block-3'));
+        boundaries.push(new Boundary(windowWidth, windowHeight*0.90, width*0.84, 10, 0, 'hero-block-4'));
+        boundaries.push(new Boundary(0, windowHeight*0.90, width*0.84, 10, 0, 'hero-block-3'));
         // "OUR IMAGINATION"
-        boundaries.push(new Boundary(0, windowHeight*2.63, width, 10, 0, 'imagine-block-1'));
-        boundaries.push(new Boundary(width, windowHeight*2.63, width, 10, 0, 'imagine-block-1'));
+        boundaries.push(new Boundary(0, windowHeight*2.3, width, 10, 0, 'imagine-block-1'));
+        boundaries.push(new Boundary(width, windowHeight*2.3, width, 10, 0, 'imagine-block-2'));
+        // PERSONALITY 
+        // Random shapes
+        boundaries.push(new BoundaryCircle(random(width*0.45, width*0.55), windowHeight*3.5, random(width*0.1, width*0.2), '#26F527', 'personality-shape-1'));
+        boundaries.push(new BoundaryPolygon(random(width*0.15, width*0.5), windowHeight*5, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-2'));
+        boundaries.push(new BoundaryPolygon(random(width*0.45, width*0.85), windowHeight*4.3, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-3'));
+        boundaries.push(new BoundaryPolygon(random(width*0.4, width*0.7), windowHeight*4.1, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-4'));
+        boundaries.push(new BoundaryPolygon(random(width*0.1, width*0.4), windowHeight*3.7, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-5'));
+        boundaries.push(new BoundaryPolygon(random(width*0.4, width*0.8), windowHeight*3.9, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-6'));
+        boundaries.push(new BoundaryPolygon(random(width*0.2, width*0.6), windowHeight*4.5, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-7'));
+        boundaries.push(new BoundaryPolygon(random(width*0.5, width*0.9), windowHeight*4.8, random(3, 6), random(width*0.1, width*0.2), randomColor(), 'personality-shape-8'));
+        // ABOUT ME
+        // Rect boundaries that keep spinning
+        boundaries.push(new Boundary(width*0.5, windowHeight*5.35, width*0.5, 10, 0, 'about-spinning-boundary-1'));
+        boundaries.push(new Boundary(width*0.2, windowHeight*5.48, width*0.5, 10, 0, 'about-spinning-boundary-2'));
+        boundaries.push(new Boundary(width*0.6, windowHeight*6.2, width*0.5, 10, 0, 'about-spinning-boundary-3'));
+        boundaries.push(new Boundary(width*0.3, windowHeight*6.3, width*0.5, 10, 0, 'about-spinning-boundary-4'));
+        boundaries.push(new Boundary(width*0.8, windowHeight*5.44, width*0.5, 10, 0, 'about-spinning-boundary-5'));
+        boundaries.push(new Boundary(width*0.8, windowHeight*5.44, width*0.5, 10, 0, 'about-spinning-boundary-6'));
+        let spinningAngle1 = 0,
+            spinningAngle2 = 0,
+            spinningAngle3 = 0,
+            spinningAngle4 = 0,
+            spinningAngle5 = 0;
+
+        for (let i = 0; i < boundaries.length; i++){
+            switch (boundaries[i].body.id){
+            case "about-spinning-boundary-1":
+                setInterval(() => {
+                    spinningAngle1 += 0.005;
+                    Matter.Body.setAngle(boundaries[i].body, `${spinningAngle1}`);
+                }, 50);
+            break;
+            case "about-spinning-boundary-2":
+                setInterval(() => {
+                    spinningAngle2 += 0.01;
+                    Matter.Body.setAngle(boundaries[i].body, -`${spinningAngle2}`);
+                }, 50);
+            break;
+            case "about-spinning-boundary-3":
+                setInterval(() => {
+                    spinningAngle3 += 0.012;
+                    Matter.Body.setAngle(boundaries[i].body, `${spinningAngle3}`);
+                }, 50);
+            break;
+            case "about-spinning-boundary-4":
+                setInterval(() => {
+                    spinningAngle4 += 0.008;
+                    Matter.Body.setAngle(boundaries[i].body, -`${spinningAngle4}`);
+                }, 50);
+            break;
+            case "about-spinning-boundary-5":
+                setInterval(() => {
+                    spinningAngle5 += 0.006;
+                    Matter.Body.setAngle(boundaries[i].body, -`${spinningAngle5}`);
+                }, 50);
+            break;
+            }
+        }
     }
     // 
     for (let i = 0; i < boundaries.length; i++){
@@ -452,7 +560,6 @@ function draw(){
         }
     }
 
-
     // boundaries[0].body.position.x = windowWidth*0.7;
     // boundaries[0].body.position.y = windowHeight*0.2;
 
@@ -462,7 +569,6 @@ function draw(){
 
     for (let i = 0; i < dominoes.length; i++){
         dominoes[i].show();
-
         if (dominoes[i].isOffScreen()){
             dominoes[i].removeFromWorld(); 
             dominoes.splice(i, 1);

@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-	<title> Matt Nguyen </title>
+	<title>Peu Web Designs | Web Designs & Development</title>
 	<!--<link rel = "shortcut icon" href = "./images/logo.png">-->
 	<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
 </head>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 
-		<div class = "header-container" id = "hero-header">
+		<div class = "sideheader-container" id = "hero-header">
 			<h1 id = "hero-brand-name">Peu</h1>
 			<h2>Web Design & Development</h2>
 			<button>Let's start your project!</button>
@@ -58,7 +58,7 @@
 		*
 	-->
 	<div class = "main-container">
-		<div class = "header-container" id = "development-header-part1">
+		<div class = "sideheader-container" id = "development-header-part1">
 			<h2>Elevating<span class = "header-highlight"> Small Businesses </span></h2>
 		</div>
 
@@ -68,17 +68,17 @@
 			<div class = "staircase">
 				<h3>Development</h3>
 				<p><span class = "staircase-num">3</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>Once we've set on a design, I can start coding it and bringing it to life!</span></p>
 			</div>
 			<div class = "staircase">
 				<h3>Design</h3>
 				<p><span class = "staircase-num">2</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>We'll meet again to discuss if there's any inspiration you'd like to draw from. I'll make 1-3 mock designs and we will collaborate through the whole process.</span></p>
 			</div>
 			<div class = "staircase">
 				<h3>Intake</h3>
 				<p><span class = "staircase-num">1</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>This is the initial contact! We'll talk and discuss your vision and goals to determine if this route is the perfect fit for you.</span></p>
 			</div>
 		</div> 
 	</div>
@@ -90,24 +90,24 @@
 		*
 	-->
 	<div class = "main-container" id = "main-staircase-container">
-		<div class = "header-container" id = "development-header-part2">
+		<div class = "sideheader-container" id = "development-header-part2">
 			<h2>Our only limit to design is <span class = "header-highlight">our imagination</span></h2>
 		</div>
 		<div class = "staircase-container-mirror">
 			<div class = "staircase">
 				<h3>Revise</h3>
 				<p><span class = "staircase-num">4</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>After creating the website, I'll send it back for you to review. We'll check if there's any typos, padding/margin issues, responsiveness that could be tweaked, etc.</span></p>
 			</div>
 			<div class = "staircase">
 				<h3>Test</h3>
 				<p><span class = "staircase-num">5</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>This phase goes hand-in-hand with Revise. We'll test the website, especially if there's heavy scripts such as animations or effects. We'll also discuss any last minute changes and get a target launch date!</span></p>
 			</div>
 			<div class = "staircase">
-				<h3>Launch!</h3>
+				<h3 id = "staircase-launch">Launch!</h3>
 				<p><span class = "staircase-num">6</span>
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+					<span>This is the best part. We can show the world our creation! Share with your friends, family, current and future clients something you can show off.</span></p>
 			</div>
 		</div> 
 	</div>
@@ -152,34 +152,106 @@
 		<div class = "overflow-x-container">
 			<div class = "overflow-x-slider">
 				<div class = "project">
-					<img src = "<?php echo $base;?>/images/Logo_White.png">
+					<h3>Chicago Shufflers</h3>
+					<img src = "<?php echo $base;?>/images/chicago-shufflers-logo.png">
 					<div class = "inner-flex-buttons">
-						<a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>Case Study</button></a>
+						<!-- <a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>Case Study</button></a> -->
 						<a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>View Site</button></a>
 					</div>
 				</div>
 				<div class = "project">
-					<img src = "<?php echo $base;?>/images/Logo_White.png">
+					<h3>208 Turf</h3>
+					<img src = "<?php echo $base;?>/images/208-logo.svg">
 					<div class = "inner-flex-buttons">
-						<button>Case Study</button>
-						<button>View Site</button>
+						<!-- <a href = "https://www.208turf.com/" target = "_blank"><button>Case Study</button></a> -->
+						<a href = "https://www.208turf.com/" target = "_blank"><button>View Site</button></a>
 					</div>
 				</div>
+				
 				<div class = "project">
-					<img src = "<?php echo $base;?>/images/Logo_White.png">
+					<h3>Venture Holidays Aruba</h3>
+					<img src = "<?php echo $base;?>/images/aruba-logo.png">
 					<div class = "inner-flex-buttons">
-						<button>Case Study</button>
-						<button>View Site</button>
-					</div>
-				</div>
-				<div class = "project">
-					<img src = "<?php echo $base;?>/images/Logo_White.png">
-					<div class = "inner-flex-buttons">
-						<button>Case Study</button>
-						<button>View Site</button>
+						<!-- <a href = "https://www.kiteboardingaruba.com/" target = "_blank"><button>Case Study</button></a> -->
+						<a href = "https://www.kiteboardingaruba.com/" target = "_blank"><button>View Site</button></a>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<!-- 
+		*
+		*
+		*	DOMINO WALL
+		*
+		*
+	-->
+	<div class = "main-container" id = "domino-wall-container">
+		<div class = "header-container" id = "domino-wall-header">
+			<h2>Let's build something<span class = "header-highlight">together</span></h2>
+		</div>
+	</div>
+
+	<!-- 
+		*
+		*
+		*	PRICING
+		*
+		*
+	-->
+	<div class = "main-container" id = "pricing-container">
+		<div class = "header-container" id = "pricing-header">
+			<h2><span class = "header-highlight">$0 down</span> for all plans</h2>
+			<h5>Hosting • Domain •  Google Analytics • SEO</h5>
+			<p>*Pricing may vary depending on the scope and complexity of the project</p>
+			<button>Let's get started!</button>
+		</div>
+
+		<div class = "plans-container">
+			<div class = "plans">
+				<h4>Static</h4>
+				<h3><span class = "header-highlight">$100</span><span class = "plan-subheader">per month<span></h3>
+				<p>Simple, yet elegant</p>
+				<ul>
+					<li>Custom templates</li>
+					<li>1 page free</li>
+					<li>1hr/month free maintenance</li>
+				</ul>
+			</div>
+			<div class = "plans">
+				<h4>Dynamic</h4>
+				<h3><span class = "header-highlight">$200</span><span class = "plan-subheader">per month<span></h3>
+				<p>Show the world who you are and your business</p>
+				<ul>
+					<li>The sky is our limit to design</li>
+					<li>Up to 7 pages free</li>
+					<li>3hr/month free maintenance</li>
+				</ul>
+			</div>
+			<div class = "plans">
+				<h4>Basic</h4>
+				<h3><span class = "header-highlight">$150</span><span class = "plan-subheader">per month<span></h3>
+				<p>Let's make an impact</p>
+				<ul>
+					<li>Custom templates</li>
+					<li>Up to 5 pages free</li>
+					<li>2hr/month free maintenance</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 
+		*
+		*
+		*	CONTACT ME
+		*
+		*
+	-->
+	<div class = "main-container">
+		<div class = "header-container" id = "contact-header">
+			<h2>Send me a message and or fill out the questionnaire so we can start creating<span class = "header-highlight">your goals</span>
+			<h4><a href = "">newyenmatt@gmail.com</a></h4>
 		</div>
 	</div>
 

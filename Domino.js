@@ -1,7 +1,7 @@
 function Domino(x, y, w, h){
 	let options = {
 		density: 0.001,
-	    restitution: 0,
+	    restitution: 0.5,
 	    friction: 1,
 	    frictionAir: 0.01,
 	}
