@@ -3,6 +3,7 @@ function BoundaryCircle(x, y, r, color, id){
 		friction: 0,
 		restitution: 0,
 		isStatic: true,
+		mass: 5,
 	}
 
 	this.body = Bodies.circle(x, y, r, options);
@@ -10,6 +11,15 @@ function BoundaryCircle(x, y, r, color, id){
 	this.body.id = id;
 	this.body.render.fillStyle = color;
 	Composite.add(world, this.body);
+
+	this.isOffScreen = () => {
+		let pos = this.body.position; 
+		if (pos.y > height + 50){
+			return true; 
+		} else {
+			return false; 
+		}
+	}
 
 	this.removeFromWorld = () => {
 		Composite.remove(world, this.body);

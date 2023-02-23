@@ -1,4 +1,4 @@
-function Domino(x, y, w, h){
+function Domino(x, y, w, h, id){
 	let options = {
 		density: 0.001,
 	    restitution: 0.5,
@@ -10,7 +10,9 @@ function Domino(x, y, w, h){
 	this.body = Bodies.rectangle(x, y, w, h, options);
 	this.w = w; 
 	this.h = h;
-	Composite.add(world, this.body);
+	// For some reason, this.body.id = id breaks physics ???
+	this.id = id;
+	
 
 	this.isOffScreen = () => {
 		let pos = this.body.position; 
@@ -24,6 +26,7 @@ function Domino(x, y, w, h){
 	this.removeFromWorld = () => {
 		Composite.remove(world, this.body);
 	}
+	Composite.add(world, this.body);
 
 	this.show = function() {
 		var pos = this.body.position,

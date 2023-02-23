@@ -10273,6 +10273,7 @@ var Common = __webpack_require__(0);
 
         Events.trigger(runner, 'beforeTick', event);
 
+        runner.isFixed = true;
         if (runner.isFixed) {
             // fixed timestep
             delta = runner.delta;

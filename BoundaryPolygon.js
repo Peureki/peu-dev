@@ -3,6 +3,7 @@ function BoundaryPolygon(x, y, sides, r, color, id){
 		friction: 0,
 		restitution: 0,
 		isStatic: true,
+		mass: 5,
 	}
 
 	this.body = Bodies.polygon(x, y, sides, r, options);
@@ -11,6 +12,15 @@ function BoundaryPolygon(x, y, sides, r, color, id){
 	this.body.render.fillStyle = color;
 	Composite.add(world, this.body);
 	fill(color);
+
+	this.isOffScreen = () => {
+		let pos = this.body.position; 
+		if (pos.y > height + 50){
+			return true; 
+		} else {
+			return false; 
+		}
+	}
 
 	this.removeFromWorld = () => {
 		Composite.remove(world, this.body);
