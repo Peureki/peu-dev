@@ -23,6 +23,10 @@ function Domino(x, y, w, h, id){
 		}
 	}
 
+	this.changeColor = (c) => {
+		this.body.render.fillStyle = c;
+	}
+
 	this.removeFromWorld = () => {
 		Composite.remove(world, this.body);
 	}
@@ -36,7 +40,7 @@ function Domino(x, y, w, h, id){
 		translate(pos.x, pos.y); 
 		rotate(angle);
 		rectMode(CENTER);
-		fill('#FFFFFF');
+		fill(this.body.render.fillStyle);
 		rect(0, 0, this.w, this.h);
 		pop();
 	}

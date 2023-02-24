@@ -41,7 +41,7 @@ function BoundaryPolygon(x, y, sides, r, color, id){
 		//translate(pos.x, pos.y); 
 		rectMode(CENTER);
 		fill(this.body.render.fillStyle);
-		noStroke();
+		stroke("#000000");
 		beginShape();
 		for (let i = 0; i < sides; i++){
 			vertex(this.body.vertices[i].x, this.body.vertices[i].y);

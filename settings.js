@@ -106,6 +106,7 @@ function mousePressed(){
 
 let turn = 0,
 	popUpToggle = 0;
+	
 settingsToggle.addEventListener('click', () => {
 	turn += 180;
 	cog.style.transform = `rotate(${turn}deg)`;

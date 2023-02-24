@@ -300,12 +300,12 @@ function setup(){
 
         if (circleResetCount == 0){
             continuouslyCreateCircles = setInterval(() =>{
-                circles.push(new Circle(windowWidth*0.6, -20, random(10, 30)));
+                circles.push(new Circle(windowWidth*0.6, -20, random(15, 30)));
             }, 1000);
         } else if (circleResetCount == 1 && circleScreenCount == 1){
             clearInterval(continuouslyCreateCircles);
             continuouslyCreateCircles = setInterval(() =>{
-                circles.push(new Circle(windowWidth*0.6, -20, random(10, 30)));
+                circles.push(new Circle(windowWidth*0.6, -20, random(15, 30)));
             }, 1000);
         }
         // Since Observer is in the script.js file, do this func to remove any lingering contact bodies
@@ -329,7 +329,7 @@ function setup(){
 
         if (circleResetCount == 0){
             continuouslyCreateCircles = setInterval(() =>{
-                circles.push(new Circle(random(0, windowWidth), -20, random(5, 20)));
+                circles.push(new Circle(random(0, windowWidth), -20, random(10, 30)));
             }, 1000);  
 
             // Putting this here because if this function gets triggered more than once, there will be more occurances of it at once
@@ -340,7 +340,7 @@ function setup(){
         } else if (circleResetCount == 1 && circleScreenCount == 2){
             clearInterval(continuouslyCreateCircles);
             continuouslyCreateCircles = setInterval(() =>{
-                circles.push(new Circle(random(0, windowWidth), -20, random(5, 20)));
+                circles.push(new Circle(random(0, windowWidth), -20, random(10, 30)));
             }, 1000); 
         }
         // EDGES OF THE SCREEN
@@ -450,7 +450,10 @@ function setup(){
 }
 
 function draw(){
-    background('#171E29');
+    if (themeToggle == 0)
+        background('#171E29');
+    else 
+        background("#e4f0f5");
 
     for (let i = 0; i < circles.length; i++){
         circles[i].show();
@@ -461,10 +464,6 @@ function draw(){
             i--;
         }
     }
-
-    // for (let i = 0; i < boundaries.length; i++){
-    //     boundaries[i].show();      
-    // }
 
     for (let i = 0; i < boundaries.length; i++){
         boundaries[i].show();

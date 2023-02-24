@@ -499,7 +499,7 @@ let nav = document.querySelector('.nav-bar'),
     navList = document.getElementById('nav-list').children,
     navToggle = 0;
 
-if (wWidth < 768){
+if (wWidth < 900){
     // When users click tha hamburger, animate the spans to form the same pattern as the boundaries in the beginning
     hamburger.addEventListener('click', () => {
         if (navToggle == 0){
@@ -537,6 +537,110 @@ if (wWidth < 768){
     });
 }
 
+// ====================================================================================================
+// LIGHT/DARK MODE
+// ==================================================================================================== 
+let themeButton = document.querySelector('.light-dark-mode'),
+    moon = document.getElementById('moon'),
+    sun = document.getElementById('sun'),
+    themeToggle = 0;
+
+let cssVar = (name, value) => {
+    if (name.substr(0, 2) !== "--") name = "--" + name; 
+    if (value) document.documentElement.style.setProperty(name, value);
+
+    return getComputedStyle(document.documentElement).getPropertyValue(name);
+}
+
+function lightMode(){
+    moon.style.opacity = 0;
+    moon.style.transform = "translateX(-50px)";
+
+    setTimeout(() => {
+        moon.style.transform = "translateX(50px)";
+
+        moon.style.display = "none";
+        sun.style.display = "block";
+        setTimeout(() => {
+            sun.style.opacity = 1;
+            sun.style.transform = "translateX(0px)"; 
+        }, 10);
+    }, 200);
+
+    cssVar('color-primary', "#24d43b");
+    cssVar('color-secondary', "#574cee");
+    cssVar('color-subheader', "#68b3e0");
+    cssVar('color-white', "#333241");
+
+    // Navigation links
+    navList.forEach((li) => {
+        li.firstChild.style.textShadow = "none";
+    });
+
+    localStorage.setItem('mode', 1);
+}
+
+function darkMode(){
+    themeToggle = 0;
+
+    sun.style.opacity = 0;
+    sun.style.transform = "translateX(-50px)";
+
+    setTimeout(() => {
+        sun.style.transform = "translateX(50px)";
+
+        sun.style.display = "none";
+        moon.style.display = "block";
+        setTimeout(() => {
+            moon.style.opacity = 1;
+            moon.style.transform = "translateX(0px)"; 
+        }, 10);
+    }, 200);
+
+    cssVar('color-primary', "#26F527");
+    cssVar('color-secondary', "#0ABCF7");
+    cssVar('color-subheader', "#FFFFFF");
+    cssVar('color-white', "#FFFFFF");
+
+    // Navigation links
+    navList.forEach((li) => {
+        li.firstChild.style.textShadow = "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;";
+    });
+    // Boundaries and Dominoes
+    for (let i = 0; i < boundaries.length; i++){
+        boundaries[i].changeColor("#FFFFFF");
+    }
+
+    localStorage.setItem('mode', 0);
+}
+
+// LOCAL STORAGE
+if (localStorage.mode == 0 || localStorage.mode == undefined){
+    // IF 0 => DO DARK MODE
+    themeToggle = 0;
+    darkMode();
+} else {
+    // IF 1 => DO LIGHT MODE
+    themeToggle = 1;
+    lightMode();
+}
+
+
+
+themeButton.addEventListener('click', () => {
+    // IF DARK MODE
+    // => DO LIGHT MODE
+    if (themeToggle == 0){
+        themeToggle = 1;
+        lightMode();
+
+    // IF LIGHT MODE
+    // => DO DARK MODE
+    } else {
+        themeToggle = 0;
+        darkMode();
+    }
+});
 
 
 
