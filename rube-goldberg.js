@@ -47,7 +47,7 @@ let words = [
         "modern",
         "excellence",
         "marvelous",
-        "cool",
+        "cool beans",
         "rad",
         "value",
         "class",
@@ -79,6 +79,8 @@ let words = [
         "quality",
         "dynamite",
         "efficiency",
+        "flare",
+        "art",
 
     ];
 
@@ -110,6 +112,7 @@ function clearCircle(array){
 // If on page => reset 
 document.addEventListener('visibilitychange', () => {
     clearInterval(continuouslyCreateCircles);
+    createCircleArray.forEach((array) => {clearInterval(array.interval)});
     if (!document.hidden)
         windowResized();
 });

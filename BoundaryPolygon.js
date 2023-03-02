@@ -46,7 +46,7 @@ function BoundaryPolygon(x, y, sides, r, color, id){
 		for (let i = 0; i < sides; i++){
 			vertex(this.body.vertices[i].x, this.body.vertices[i].y);
 		}
-		endShape();
+		endShape(CLOSE);
 		pop();
 	}
 }

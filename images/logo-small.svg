@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="27.315001mm"
+   height="24.694719mm"
+   viewBox="0 0 27.315 24.694719"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="logo-small.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="29.96196"
+       y="203.64993"
+       width="74.016663"
+       height="57.771786"
+       id="rect911" />
+    <rect
+       x="39.02713"
+       y="194.28659"
+       width="64.016937"
+       height="36.610645"
+       id="rect905" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="68.097926"
+     inkscape:cy="46.894295"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:lockguides="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1781"
+     inkscape:window-height="1198"
+     inkscape:window-x="1232"
+     inkscape:window-y="110"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.354002,-116.55458)">
+    <text
+       xml:space="preserve"
+       id="text903"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Readex Pro';-inkscape-font-specification:'Readex Pro';white-space:pre;shape-inside:url(#rect905);stroke-width:0.264331;"
+       transform="scale(1.0009518,0.99904915)" />
+    <text
+       xml:space="preserve"
+       id="text909"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Readex Pro';-inkscape-font-specification:'Readex Pro';white-space:pre;shape-inside:url(#rect911);stroke-width:0.264331;"
+       transform="scale(1.0009518,0.99904915)" />
+    <g
+       id="g939">
+      <g
+         aria-label="P"
+         id="text901"
+         style="font-size:35.2778px;line-height:1.25;font-family:'Readex Pro';-inkscape-font-specification:'Readex Pro';stroke-width:0.0699376">
+        <path
+           d="m 36.347575,141.2493 v -24.69446 h 10.054173 q 2.010835,0 3.633614,1.02305 1.658057,0.98778 2.645835,2.71639 0.987778,1.72862 0.987778,3.84528 0,2.11667 -0.987778,3.84528 -0.987778,1.72862 -2.645835,2.78695 -1.622779,1.02306 -3.633614,1.02306 h -6.244171 v 9.45445 z m 3.810002,-13.12334 h 6.173616 q 0.9525,0 1.728612,-0.52917 0.776112,-0.56445 1.234723,-1.44639 0.493889,-0.91722 0.493889,-2.01084 0,-1.09361 -0.493889,-1.97555 -0.458611,-0.88195 -1.234723,-1.41111 -0.776112,-0.52917 -1.728612,-0.52917 h -6.173616 z"
+           style="font-size:35.2778px;fill:#26f527;fill-opacity:1;stroke-width:0.0699376"
+           id="path932" />
+      </g>
+      <path
+         id="path857"
+         style="fill:#ff1178;fill-opacity:0.980392;stroke:#000000;stroke-width:0;paint-order:markers stroke fill"
+         d="m 53.669003,138.2478 a 3,3 0 0 1 -2.999136,3.00078 3,3 0 0 1 -3.000864,-2.99906 3,3 0 0 1 2.998979,-3.00094 3,3 0 0 1 3.001021,2.9989" />
+      <path
+         id="rect886"
+         style="fill:#0abcf7;fill-opacity:1;stroke:#000000;stroke-width:0;paint-order:markers stroke fill"
+         d="m 32.962247,116.55458 3.386275,0.87627 -6.608244,23.81773 -3.386275,-0.87628 z" />
+    </g>
+  </g>
+</svg>

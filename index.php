@@ -9,9 +9,13 @@
 
 	<!--<link rel ="stylesheet" type="text/css" href="./styles.css">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 	<title>Peu Web Designs | Web Designs & Development</title>
+	<meta name = "description" content = "Transform your online presence with expert web design and development services. Our team creates visually stunning and user-friendly websites to help your business succeed.">
+
+	<link rel = "icon" type = "image/x-icon" href = "<?php echo $base;?>/images/logo-small.svg">
 	<!--<link rel = "shortcut icon" href = "./images/logo.png">-->
 	<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
 </head>
@@ -36,10 +40,12 @@
 			</ul>
 		</div>
 
+
+
 		<div class = "inner-nav">
 			<div class = "light-dark-mode">
-				<img src = "<?php echo $base;?>/images/moon.svg" id = "moon">
-				<img src = "<?php echo $base;?>/images/sun.svg" id = "sun">
+				<img src = "<?php echo $base;?>/images/moon.svg" id = "moon" title = "Moon for dark mode" alt = "Moon for dark mode">
+				<img src = "<?php echo $base;?>/images/sun.svg" id = "sun" title = "Sun for light mode" alt = "Sun for light">
 			</div>
 
 			<div class = "settings-toggle">
@@ -191,7 +197,7 @@
 			<div class = "overflow-x-slider">
 				<div class = "project">
 					<h3>Chicago Shufflers</h3>
-					<img src = "<?php echo $base;?>/images/chicago-shufflers-logo.png">
+					<img id = "project-1-img" src = "<?php echo $base;?>/images/chicago-shufflers-logo.png" title = "Chicago Shufflers" alt = "Chicago Shufflers logo">
 					<div class = "inner-flex-buttons">
 						<!-- <a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>Case Study</button></a> -->
 						<a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>View Site</button></a>
@@ -199,7 +205,7 @@
 				</div>
 				<div class = "project">
 					<h3>Alfonso & Webber</h3>
-					<img src = "<?php echo $base;?>/images/Alfonso_Webber_Logo_Horizontal_White.svg">
+					<img id = "project-2-img" src = "<?php echo $base;?>/images/Alfonso_Webber_Logo_Horizontal_White.svg" title = "Alfonso & Webber" alt = "Alfonso and Webber logo">
 					<div class = "inner-flex-buttons">
 						<!-- <a href = "https://www.chicagoshufflers.com/" target = "_blank"><button>Case Study</button></a> -->
 						<a href = "https://www.alfonsoandwebber.com/" target = "_blank"><button>View Site</button></a>
@@ -207,7 +213,7 @@
 				</div>
 				<div class = "project">
 					<h3>208 Turf</h3>
-					<img src = "<?php echo $base;?>/images/208-logo.svg">
+					<img src = "<?php echo $base;?>/images/208-logo.svg" title = "208Turf" alt = "208 Turf logo">
 					<div class = "inner-flex-buttons">
 						<!-- <a href = "https://www.208turf.com/" target = "_blank"><button>Case Study</button></a> -->
 						<a href = "https://www.208turf.com/" target = "_blank"><button>View Site</button></a>
@@ -216,7 +222,7 @@
 				
 				<div class = "project">
 					<h3>Venture Holidays Aruba</h3>
-					<img src = "<?php echo $base;?>/images/aruba-logo.png">
+					<img src = "<?php echo $base;?>/images/aruba-logo.png" title = "Venture Holidays Aruba" alt = "Venture Holidays Aruba logo">
 					<div class = "inner-flex-buttons">
 						<!-- <a href = "https://www.kiteboardingaruba.com/" target = "_blank"><button>Case Study</button></a> -->
 						<a href = "https://www.kiteboardingaruba.com/" target = "_blank"><button>View Site</button></a>

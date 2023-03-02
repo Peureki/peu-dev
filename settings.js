@@ -2,6 +2,7 @@ let settingsToggle = document.querySelector('.settings-toggle'),
 	cog = document.getElementById('settings-cog'),
 	settingsPopup = document.querySelector('.settings-popup'),
 	settingsOptions = document.querySelector('.settings-options'),
+	options = settingsOptions.children;
 	refreshButton = document.getElementById('refresh');
 
 let settingsMode = document.querySelector('.settings-mode'),
@@ -60,10 +61,10 @@ function selectMode(mode){
 	switch (mode){
 	case 1: selectedMode.style.left = 0;
 		html = `
-			<button onclick = "dropChoice = 1;">Circles</button>
-			<button onclick = "dropChoice = 2;">Squares</button>
-			<button onclick = "dropChoice = 3;">Lines</button>
-			<button onclick = "dropChoice = 4;">Dominoes</button>
+			<button onclick = "dropChoice = 0;">Circles</button>
+			<button onclick = "dropChoice = 1;">Squares</button>
+			<button onclick = "dropChoice = 2;">Lines</button>
+			<button onclick = "dropChoice = 3;">Dominoes</button>
 		`;
 		break;
 	case 2: selectedMode.style.left = `${50}%`;
@@ -81,32 +82,56 @@ selectMode(1);
 
 
 function mousePressed(){
+
     //boxes.push(new Box(mouseX, mouseY, random(10, 40), random(10, 40)));
     //circles.push(new Circle(mouseX, mouseY,random(10, 20)));
     //boundaries.push(new Boundary(mouseX, mouseY, 10, 10, 0, "default", "merp"));
     switch (dropChoice){
-    case 1: circles.push(new Circle(mouseX, mouseY,random(10, 20)));
+    case 0: circles.push(new Circle(mouseX, mouseY,random(10, 20)));
         break;
 
-    case 2: boundaries.push(new Boundary(mouseX, mouseY, 20, 20, 0, "default", "merp"));
+    case 1: boundaries.push(new Boundary(mouseX, mouseY, 20, 20, 0, "default", "merp"));
     	break;
 
-    case 3: boundaries.push(new Boundary(mouseX, mouseY, 200, 10, 0, "default", "merp"));
+    case 2: boundaries.push(new Boundary(mouseX, mouseY, 200, 10, 0, "default", "merp"));
     	break;
 
-    case 4: dominoes.push(new Domino(mouseX, mouseY, 20, windowHeight*0.2, "merp"));
+    case 3: dominoes.push(new Domino(mouseX, mouseY, 20, windowHeight*0.2, "merp"));
     	break;
 
     default: circles.push(new Circle(mouseX, mouseY,random(10, 20)));
+
     	break;
     }
-    //settingsOptions.children[dropChoice-1].style.color = "var(--color-secondary)";
-
+    
+    // for (let i = 0; i < options.length; i++){
+    // 	if (dropChoice == i){
+    // 		options[i].style.color = "var(--color-secondary)";
+    // 	} else {
+    // 		options[i].style.color = "var(--color-button-text)";
+    // 	}
+    // }
 }
+
+// For each button, when the user clicks, make the focused element highlighted
+// By default, make circles highlighted
+// If user chooses a different one, make others normal button colors 
+options[0].style.color = "var(--color-secondary)";
+options.forEach((opt => {
+	opt.addEventListener('click', () => {
+		for (let i = 0; i < options.length; i++){
+			if (dropChoice == i){
+	    		options[i].style.color = "var(--color-secondary)";
+	    	} else {
+	    		options[i].style.color = "var(--color-button-text)";
+	    	}
+		}
+	})
+}))
 
 let turn = 0,
 	popUpToggle = 0;
-	
+
 settingsToggle.addEventListener('click', () => {
 	turn += 180;
 	cog.style.transform = `rotate(${turn}deg)`;

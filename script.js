@@ -489,6 +489,13 @@ function setMobile(){
     mobileObserver.observe(contactHeader);
 }
 
+// PROJECT IMAGES
+let project1Img = document.getElementById('project-1-img'),
+    project2Img = document.getElementById('project-2-img');
+
+// PLANS
+let plans = document.querySelectorAll('.plans');
+
 // ====================================================================================================
 // NAVIGATION
 // ==================================================================================================== 
@@ -577,6 +584,15 @@ function lightMode(){
         li.firstChild.style.textShadow = "none";
     });
 
+    // Change project 1 and 2 image sources
+    project1Img.src = "./images/chicago-shufflers-logo-black.png";
+    project2Img.src = "./images/Alfonso_Webber_Logo_Horizontal_Black.svg";
+
+    // Remove background for plans
+    plans.forEach((p) => {
+        p.style.backgroundColor = "transparent";
+    });
+
     localStorage.setItem('mode', 1);
 }
 
@@ -611,6 +627,15 @@ function darkMode(){
         boundaries[i].changeColor("#FFFFFF");
     }
 
+    // Change project 1 and 2 image sources
+    project1Img.src = "./images/chicago-shufflers-logo.png";
+    project2Img.src = "./images/Alfonso_Webber_Logo_Horizontal_White.svg";
+
+    // Give back the background
+    plans.forEach((p) => {
+        p.style.backgroundColor = "var(--color-bkg-black-fade)";
+    });
+
     localStorage.setItem('mode', 0);
 }
 
@@ -624,8 +649,6 @@ if (localStorage.mode == 0 || localStorage.mode == undefined){
     themeToggle = 1;
     lightMode();
 }
-
-
 
 themeButton.addEventListener('click', () => {
     // IF DARK MODE

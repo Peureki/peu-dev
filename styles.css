@@ -182,7 +182,7 @@ button:hover{
      *  FONTS
      */
     --font-family: 'Readex Pro', sans-serif;
-    --fontSize-h1: clamp(70px, 15vw, 150px);
+    --fontSize-h1: clamp(90px, 15vw, 150px);
     --fontSize-h2: clamp(50px, 10vw, 75px);
     --fontSize-h3: clamp(40px, 7vw, 60px);
     --fontSize-h4: clamp(30px, 4vw, 40px);
@@ -483,6 +483,13 @@ button:hover{
 }
 #hero-brand-name{
     margin-left: -10px;
+    display: flex;
+}
+#hero-brand-name span:nth-child(2){
+    color: var(--color-secondary);
+}
+#hero-brand-name span:nth-child(3){
+    color: var(--color-objects);
 }
 #development-header-part2{
     right: 0;
