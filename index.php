@@ -12,11 +12,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-	<title>Peu Web Designs | Web Designs & Development</title>
+	<title>Peu Web Design | Web Design & Development</title>
 	<meta name = "description" content = "Transform your online presence with expert web design and development services. Our team creates visually stunning and user-friendly websites to help your business succeed.">
 
-	<link rel = "icon" type = "image/x-icon" href = "<?php echo $base;?>/images/logo-small.svg">
-	<!--<link rel = "shortcut icon" href = "./images/logo.png">-->
+	<meta property=’og:title’ content='Peu Web Desing | Web Design & Development'/>
+	<meta property=’og:image’ content="<?php echo $base;?>/images/logo-long.svg"/>
+	<meta property=’og:description’ content="Transform your online presence with expert web design and development services. Our team creates visually stunning and user-friendly websites to help your business succeed."/>
+	<meta property=’og:url’ content="https://peuwebdesign.com/"/>
+	<meta property='og:image:width' content='1200' />
+	<meta property='og:image:height' content='627' />
+
+	<link rel = "icon" type = "image/x-icon" href = "<?php echo $base;?>/images/logo.png">
 	<link type = "text/css" rel = "stylesheet" href = "<?php echo $base;?>/styles.css?v=<?php echo $date;?>">
 </head>
 <body>
@@ -178,7 +184,7 @@
 	<div class = "main-container" id = "about">
 		<div class = "header-container" id = "about-header">
 			<h2 id = "about-header-highlight">Hi! <span class = "header-highlight">I'm Matt</span></h2>
-			<p>As a kid, I used to create Rube Goldberg contraptions and set up thousands of dominoes. I strive to live my life with my passions. Dominoes, dancing, gaming, buliding communities, web development. I love to see my passions create art or to have a positive impact in the world. This website is a product of combining those passions. Let's work together so I can help you show off your passion!</p>
+			<p>As a kid, I used to create Rube Goldberg contraptions and set up thousands of dominoes. I strive to live my life with my passions. Dominoes, dancing, gaming, building communities, web development. I love to see my passions create art or to have a positive impact in the world. This website is a product of combining those passions. Let's work together so I can help you show off your passion!</p>
 		</div>
 	</div>
 	<!-- 

@@ -204,6 +204,9 @@ button:hover{
 #pricing{
     height: 100%;
 }
+.thumbnail{
+    display: none;
+}
 /* 
  *  NAVIGATION
  */
@@ -721,6 +724,7 @@ button:hover{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
 }
 .project h3{
     text-align: center;
