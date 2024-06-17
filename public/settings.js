@@ -130,7 +130,7 @@ options.forEach((opt => {
 }))
 
 let turn = 0,
-	popUpToggle = 0;
+	popUpToggle = 1;
 
 settingsToggle.addEventListener('click', () => {
 	turn += 180;

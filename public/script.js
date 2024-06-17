@@ -328,11 +328,11 @@ let observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting){
             if (entry.target.id == "pricing-header"){
-                new setBoundary(boundaries, "about").clearBodies();
-                new setBoundary(boundaries, "domino").clearBodies();
-                new setBoundary(boundaries, "project").clearBodies();
+                // new setBoundary(boundaries, "about").clearBodies();
+                // new setBoundary(boundaries, "domino").clearBodies();
+                // new setBoundary(boundaries, "project").clearBodies();
                 new setBoundary(boundaries, "contact").clearBodies();
-                new setBoundary(dominoes, "").clearDominoes();
+                // new setBoundary(dominoes, "").clearDominoes();
 
                 new clearCircle(createCircleArray).clearOnly('contact');
             }
@@ -437,14 +437,14 @@ function setMobile(){
                 // DOMINO CONTAINER
                 // ====================================================================================================
                 } else if (entry.target.id == "domino-wall-header"){
-                    boundaries.push(new BoundaryCircle(0, wHeight*0.1, 20, '#26F527', 'domino-1'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.15, wWidth*0.5), wHeight*0.5, random(3, 6), random(10, 20), randomColor(), 'domino-2'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.45, wWidth*0.85), wHeight*0.3, random(3, 6), random(20, 30), randomColor(), 'domino-3'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.2, wWidth*0.4), wHeight*0.2, random(3, 6), random(20, 30), randomColor(), 'domino-4'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.1, wWidth*0.4), wHeight*0.7, random(3, 6), random(20, 30), randomColor(), 'domino-5'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.4, wWidth*0.8), wHeight*0.9, random(3, 6), random(20, 30), randomColor(), 'domino-6'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.2, wWidth*0.6), wHeight*0.5, random(3, 6), random(20, 30), randomColor(), 'domino-7'));
-                    boundaries.push(new BoundaryPolygon(random(wWidth*0.5, wWidth*0.9), wHeight*0.8, random(3, 6), random(20, 30), randomColor(), 'domino-8'));
+                    boundaries.push(new BoundaryCircle(0, wHeight*0.1, random(5, 10), '#26F527', 'domino-1'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.15, wWidth*0.5), wHeight*0.5, random(3, 6), random(5, 10), randomColor(), 'domino-2'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.45, wWidth*0.85), wHeight*0.3, random(3, 6), random(5, 10), randomColor(), 'domino-3'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.2, wWidth*0.4), wHeight*0.2, random(3, 6), random(5, 10), randomColor(), 'domino-4'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.1, wWidth*0.4), wHeight*0.7, random(3, 6), random(5, 10), randomColor(), 'domino-5'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.4, wWidth*0.8), wHeight*0.9, random(3, 6), random(5, 10), randomColor(), 'domino-6'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.2, wWidth*0.6), wHeight*0.5, random(3, 6), random(5, 10), randomColor(), 'domino-7'));
+                    boundaries.push(new BoundaryPolygon(random(wWidth*0.5, wWidth*0.9), wHeight*0.8, random(3, 6), random(5, 10), randomColor(), 'domino-8'));
 
                     new setBoundary(boundaries, "domino").growRadius();
                     

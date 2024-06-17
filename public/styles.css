@@ -75,7 +75,12 @@ a {
     text-decoration: none;
     color: var(--color-secondary);
 }
-
+a p {
+    transition: all 0.3s ease;
+}
+a:hover p{
+    color: var(--color-secondary);
+}
 /* change colours to suit your needs */
 ins {
     background-color:#ff9;
@@ -149,7 +154,7 @@ button{
     font-family: var(--font-family);
     background-color: var(--color-secondary);
     font-size: var(--fontSize-p1);
-    padding: 20px;
+    padding: 15px;
     color: var(--color-button-text);
     border: none;
     cursor: pointer;
@@ -215,7 +220,7 @@ button:hover{
     padding-left: 5%;
     padding-right: 50px;
     width: 90vw;
-    position: sticky;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -225,6 +230,7 @@ button:hover{
 .nav-bar ul{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     list-style: none;
 }
 .nav-bar li{
@@ -241,6 +247,9 @@ button:hover{
 }
 .nav-bar li:hover{
     color: var(--color-secondary);
+}
+.nav-bar img{
+    width: 30px;
 }
 .hamburger{
     display: none;
@@ -305,6 +314,9 @@ button:hover{
     .nav-bar li{
         font-size: var(--fontSize-h4);
     }
+    .nav-bar img{
+        width: 100px;
+    }
     .settings{
         padding-left: 50px;
     }
@@ -347,7 +359,7 @@ button:hover{
 }
 .settings-popup{
     position: fixed;
-    display: none; /* display: flex when active */
+    display: flex;
     align-items: center;
     bottom: 0;
     left: 5%;
@@ -467,32 +479,55 @@ button:hover{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.header-container .header-highlight{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
 .header-highlight{
     color: var(--color-primary);
+}
+.link-highlight{
+    display: unset;
+    color: var(--color-secondary);
 }
 #home{
     height: 100%;
 }
-#hero-header{
-    height: 100%;
-    width: 50%;
+.hero-header-container{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    z-index: -1;
-    position: unset;
-    transform: translateY(-50px); /* Same as padding-top from sticky nav bar */
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    padding-left: 5%;
+    gap: 20px;
 }
-#hero-brand-name{
-    margin-left: -10px;
+.hero-brand-name{
     display: flex;
 }
-#hero-brand-name span:nth-child(2){
+.hero-brand-name span:nth-child(1){
+    color: var(--color-primary);
+}
+.hero-brand-name span:nth-child(2){
+    color: var(--color-objects);
+}
+.hero-brand-name span:nth-child(3){
     color: var(--color-secondary);
 }
-#hero-brand-name span:nth-child(3){
-    color: var(--color-objects);
+.hero-logo{
+    width: clamp(10rem, 25vw, 25rem);
+}
+.cta-block,
+.cta-block-footer{
+    display: flex;
+    gap: 20px;
+}
+.cta-block-footer{
+    padding-block: 20px;
+    justify-content: center;
 }
 #development-header-part2{
     right: 0;
@@ -571,14 +606,14 @@ button:hover{
         padding-left: 20px;
         padding-right: 20px;
     }
-    #hero-header{
+    .hero-header-container{
         height: 50%;
         width: 100%;
         padding-left: unset;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
     }
     #hero-header h2{
         text-align: center;
@@ -740,6 +775,10 @@ button:hover{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.project svg{
+    width: 100%;
+    height: 100%;
+}
 .inner-flex-buttons{
     display: flex;
     justify-content: space-around;
@@ -795,82 +834,32 @@ button:hover{
 }*/
 
 .plans-container{
-    height: 60%;
+    width: clamp(25rem, 50vw, 40rem);
+    display: block;
+    margin-inline: auto;
+}
+.plans-container ul{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
 }
-.plan-subheader{
-    font-size: var(--fontSize-p1);
-    font-weight: normal;
+.plans-container li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.plans{
-    padding: 50px;
-    margin-left: 25px;
-    margin-right: 25px;
-    max-width: 30%;
-    transition: 0.5s all ease;
-}
-.plans:hover{
-    border-radius: 50px;
-}
-.plans:nth-child(1),
-.plans:nth-child(3){
-    margin-top: 100px;
-}
-.plans:nth-child(2){
-    border: 10px solid var(--color-primary);
-}
-.plans:nth-child(1),
-.plans:nth-child(3){
-    border: 10px solid var(--color-white);
-}
-.plans h3,
-.plans h4{
-    text-align: center;
-}
-.plans h3{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.plans p{
-    text-align: center;
-    margin-bottom: 25px;
-}
-.plans ul{
-    list-style: disc;
-}
-.plans li{
-    color: var(--color-white);
-    font-size: var(--fontSize-p1);
-    padding-top: 5px;
-    padding-bottom:5px;
+.bullet-point{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-objects);
 }
 @media only screen and (max-width: 900px){
     .plans-container{
-        flex-direction: column;
-        align-items: center;
+        width: 90%;
     }
-    .plans{
+    .plans-container p{
         max-width: 90%;
-        padding: 25px;
-        background-color: var(--color-bkg-black-fade);
-    }
-    .plans:nth-child(1){
-        order: 3;
-        border: unset;
-        border-bottom: 5px solid var(--color-white);
-    }
-    .plans:nth-child(2){
-        order: 1;
-        border: unset;
-        border-bottom: 5px solid var(--color-primary);
-        margin-top: 100px;
-    }
-    .plans:nth-child(3){
-        order: 2;
-        border: unset;
-        border-bottom: 5px solid var(--color-white);
     }
 }
 
