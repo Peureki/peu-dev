@@ -585,7 +585,7 @@ function lightMode(){
     });
 
     // Change project 1 and 2 image sources
-    project1Img.src = "./images/chicago-shufflers-logo-black.png";
+
     project2Img.src = "./images/Alfonso_Webber_Logo_Horizontal_Black.svg";
 
     // Remove background for plans
@@ -627,9 +627,6 @@ function darkMode(){
         boundaries[i].changeColor("#FFFFFF");
     }
 
-    // Change project 1 and 2 image sources
-    project1Img.src = "./images/chicago-shufflers-logo.png";
-    project2Img.src = "./images/Alfonso_Webber_Logo_Horizontal_White.svg";
 
     // Give back the background
     plans.forEach((p) => {
